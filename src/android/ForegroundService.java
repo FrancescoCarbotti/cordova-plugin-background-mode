@@ -224,6 +224,7 @@ public class ForegroundService extends Service {
             if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 flags = flags | PendingIntent.FLAG_MUTABLE;
             }
+
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             PendingIntent contentIntent = PendingIntent.getActivity(
                     context, NOTIFICATION_ID, intent,
